@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<head>
+    <title>Accessibility Helper</title>
+    <style>
+        body {
+            width: 250px;
+            height: 450px;
+            font-family: Arial, sans-serif;
+            padding: 15px;
+            background-color: #f4eec7;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 0px; /* Reduced margin */
+            padding-top: 5px; /* Optional: Fine-tune height */
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        button, select, input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #a5b4fc;
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #818cf8;
+        }
+
+        select, input {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>accessify</h1>
+
+    <h3>Dyslexia Mode</h3>
+    <select id="dyslexiaLevel">
+        <option value="none">None</option>
+        <option value="mild">Mild</option>
+        <option value="moderate">Moderate</option>
+        <option value="strong">Strong</option>
+    </select>
+
+    <h3>Color Blind Mode</h3>
+    <select id="colorBlindToggle">
+        <option value="none">None</option>
+        <option value="protanopia">Protanopia</option>
+        <option value="deuteranopia">Deuteranopia</option>
+        <option value="tritanopia">Tritanopia</option>
+        <option value="high-contrast">High Contrast</option>
+    </select>
+
+    <h3>Text-to-Speech</h3>
+    <button id="speakButton">Read Selected Text</button>
+    <button id="stopButton">Stop Reading</button>
+
+    <h3>Reading Speed</h3>
+    <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,10 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "Accessify - Dyslexia-Friendly Reader",
+    "name": "Accessify - Accessibility Helper",
     "version": "1.0",
-    "description": "Enhances text readability for dyslexic users by adjusting fonts and spacing.",
-    "permissions": ["scripting", "storage", "activeTab"],
+    "description": "Enhances web accessibility with Dyslexia Mode, Color Blind Mode, and Text-to-Speech.",
+    "permissions": ["storage", "activeTab", "scripting"],
     "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html"
+    },
     "background": {
       "service_worker": "background.js"
     },
@@ -13,9 +16,6 @@
         "matches": ["<all_urls>"],
         "js": ["content.js"]
       }
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    }
+    ]
   }
   
